@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=refresh" />
+    <title>DevBoard Main Page</title>
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .after-complete-btn-click{
+            background-color: #e5e7eb;
+            color: #6b7282;
+        }
+    </style>
+
+</head>
+
+<body class="bg-[#F4F7FF] mx-[140px] ">
+
+    <section class="mb-[20px]" id="nav-section">
+        <header>
+            <nav class="flex justify-between items-center bg-white rounded-2xl px-6 py-4">
+                <div class="flex items-center">
+                    <img class="mr-3" src="assets/logo.png" alt="">
+                    <p class="text-[35px]">Dev<Span class="font-bold">Board</Span></p>
+                </div>
+
+                <div class="flex items-center justify-center">
+
+                    <div class="flex p-5 justify-center items-center rounded-[32px] bg-[#F4F7FF]">
+                        <input type="checkbox" checked class="w-8 h-8 mr-5 ">
+                        <p id="main-number" class="text-3xl font-extrabold">23</p>
+                    </div>
+
+                    <div class="p- bg-[#F4F7FF] rounded-[100%] ml-9">
+                        <button id="colorful-circle" class="w-12 h-12 rounded-full flex items-center justify-center"
+                            style="background: conic-gradient(at 60% 45%, red, orange, yellow, green, blue, indigo, violet, red);">
+                            <span class="material-symbols-outlined bg-white text-[#3752FD] rounded-full p-1">
+                                refresh
+                            </span>
+                        </button>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+    </section>
+
+    <section class="flex">
+
+        <div class="bg-white rounded-2xl mr-6">
+            <div class="flex p-6 justify-around">
+                <div class="mr-6 bg-[#F4F7FF] rounded-2xl">
+                    <div class="flex justify-center items-center pl-8 pt-8 pr-5 pb-6">
+                        <div class="bg-white p-4 rounded-full flex items-center justify-center mr-5">
+                            <input type="checkbox" checked class="w-6 h-6">
+                        </div>
+                        <div>
+                            <p class="font-medium text-[#00303C]">Task Assigned <br>
+                                <span id="task-assigned-number" class="text-[32px] font-bold">06</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="go-blog-page"
+                    class="flex justify-center items-center py-6 pl-10 pr-[85px] bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-2xl">
+                    <div>
+                        <img src="assets/board.png" alt="">
+                    </div>
+                    <div class="ml-6">
+                        <p class="text-[24px] font-medium text-white">Discover Something <br>New Today!</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center py-8 px-4 bg-[#F4F7FF] ml-6 rounded-2xl">
+                    <div class="bg-white p-4 rounded-full mr-4">
+                        <img src="assets/calender.png" alt="">
+                    </div>
+                    <p id="current-date" class="text-[22px] font-bold"></p>
+                </div>
+            </div>
+            <hr class="mt-3 mb-3 border-dashed">
+
+
+            <div class="mx-6 grid grid-cols-3 gap-8">
+                <div class="p-6 bg-[#F4F7FF] rounded-2xl  w-[342px] h-[317px]">
+                    <button class="px-4 py-2 bg-white text-[#00303C] rounded-xl mb-4">ShowEase</button>
+                    <h1 id="card1-title" class="text-[24px] font-medium text-[#00303C] mb-4">Fix Mobile Button Issue </h1>
+
+                    <p class="p-4 bg-white text-[#00303C] rounded-lg mb-3 w-[294px] h-[52]">Debug using Chrome <br>
+                        DevTools, check for overlappi...</p>
+
+                    <div class="flex justify-between">
+                        <p class="text-[14px] text-[#00303C]">Deadline <br><span class="font-medium">21 March
+                                2025</span></p>
+                        <button onclick="myfunction()" id="complete-btn1" class="px-5 py-2 bg-[#3752FD] text-white font-medium rounded-lg ">Completed</button>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-[#F4F7FF] rounded-2xl  w-[342px] h-[317px]">
+                    <button class="px-4 py-2 bg-white text-[#00303C] rounded-xl mb-4">CloudSync</button>
+                    <h1 id="card2-title" class="text-[24px] font-medium text-[#00303C] mb-4">Add Dark Mode </h1>
+
+                    <p class="p-4 bg-white text-[#00303C] rounded-lg mb-3 w-[294px] h-[52]">Store the user's preference
+                        in <br> localStorage, update CSS vari...</p>
+
+                    <div class="flex justify-between">
+                        <p class="text-[14px] text-[#00303C]">Deadline <br><span class="font-medium">21 March
+                                2025</span></p>
+                        <button id="complete-btn2" class="px-5 py-2 bg-[#3752FD] text-white font-medium rounded-lg">Completed</button>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-[#F4F7FF] rounded-2xl  w-[342px] h-[317px]">
+                    <button class="px-4 py-2 bg-white text-[#00303C] rounded-xl mb-4">SwiftPay</button>
+                    <h1 id="card3-title" class="text-[24px] font-medium text-[#00303C] mb-4">Optimize Home page  </h1>
+
+                    <p class="p-4 bg-white text-[#00303C] rounded-lg mb-3 w-[294px] h-[52]">Debug using Chrome <br>
+                        DevTools, check
+                        for overlappi...</p>
+
+                    <div class="flex justify-between">
+                        <p class="text-[14px] text-[#00303C]">Deadline <br><span class="font-medium">21 March
+                                2025</span></p>
+                        <button id="complete-btn3" class="px-5 py-2 bg-[#3752FD] text-white font-medium rounded-lg">Completed</button>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-[#F4F7FF] rounded-2xl  w-[342px] h-[317px]">
+                    <button class="px-4 py-2 bg-white text-[#00303C] rounded-xl mb-4">Meta</button>
+                    <h1 id="card4-title" class="text-[24px] font-medium text-[#00303C] mb-4">Add new emoji 🤲</h1>
+
+                    <p class="p-4 bg-white text-[#00303C] rounded-lg mb-3 w-[294px] h-[52]">Debug using Chrome <br>
+                        DevTools, check
+                        for overlappi...</p>
+
+                    <div class="flex justify-between">
+                        <p class="text-[14px] text-[#00303C]">Deadline <br><span class="font-medium">21 March
+                                2025</span></p>
+                        <button id="complete-btn4" class="px-5 py-2 bg-[#3752FD] text-white font-medium rounded-lg">Completed</button>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-[#F4F7FF] rounded-2xl  w-[342px] h-[317px]">
+                    <button class="px-4 py-2 bg-white text-[#00303C] rounded-xl mb-4">Google LLC</button>
+                    <h1 id="card5-title" class="text-[24px] font-medium text-[#00303C] mb-4">Integrate OpenAI API</h1>
+
+                    <p class="p-4 bg-white text-[#00303C] rounded-lg mb-3 w-[294px] h-[52]">Debug using Chrome <br>
+                        DevTools, check
+                        for overlappi...</p>
+
+                    <div class="flex justify-between">
+                        <p class="text-[14px] text-[#00303C]">Deadline <br><span class="font-medium">21 March
+                                2025</span></p>
+                        <button id="complete-btn5" class="px-5 py-2 bg-[#3752FD] text-white font-medium rounded-lg">Completed</button>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-[#F4F7FF] rounded-2xl w-[342px] h-[317px]">
+                    <button class="px-4 py-2 bg-white text-[#00303C] rounded-xl mb-4">Glassdoar</button>
+                    <h1 id="card6-title" class="text-[24px] font-medium text-[#00303C] mb-4">Improve Job searching</h1>
+
+                    <p class="p-4 bg-white text-[#00303C] rounded-lg mb-3 w-[294px] h-[52]">Debug using Chrome <br>
+                        DevTools, check
+                        for overlappi...</p>
+
+                    <div class="flex justify-between">
+                        <p class="text-[14px] text-[#00303C]">Deadline <br><span class="font-medium">21 March
+                                2025</span></p>
+                        <button id="complete-btn6" class="px-5 py-2 bg-[#3752FD] text-white font-medium rounded-lg">Completed</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bg-white rounded-2xl w-[280px] h-[918px]">
+            <div class="">
+                <p class="text-xl text-center pt-4 pb-6 font-medium text-[#00303C] mr-4"> <span><i
+                            class="fa-solid fa-rotate-left fa-lg"></i></span> Activity Log</p>
+                <div class="flex justify-center">
+                    <button id="histry-btn" class="font-medium px-5 py-3 bg-[#3752FD] rounded-lg text-white">Clear History</button>
+                </div>
+            </div>
+            <hr class="mt-3 mb-3 border-dashed">
+
+
+            <div class="px-" id="history-box">
+
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        document.getElementById("go-blog-page").addEventListener('click', function () {
+            window.location.href = "blogs.html"
+        })
+    </script>
+
+    <script src="script/colorful-circle.js"></script>
+    <script src="script/scrift.js"></script>
+    <script src="script/date.js"></script>
+</body>
+
+</html>
